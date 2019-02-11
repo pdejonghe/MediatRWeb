@@ -15,6 +15,7 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\MediatRWeb.Core\MediatRWeb.Core.csproj" />
     <ProjectReference Include="..\MediatRWeb.Notifications\MediatRWeb.Notifications.csproj" />
     <ProjectReference Include="..\MediatRWeb.Requests\MediatRWeb.Requests.csproj" />
   </ItemGroup>

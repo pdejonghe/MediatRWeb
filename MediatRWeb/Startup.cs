@@ -1,4 +1,6 @@
 ﻿using MediatR;
+using MediatR.Pipeline;
+using MediatRWeb.Core;
 using MediatRWeb.Notifications;
 using MediatRWeb.Requests;
 using Microsoft.AspNetCore.Builder;
@@ -31,9 +33,13 @@ namespace MediatRWeb
 
             services.AddMediatR();
             services.AddMediatR(typeof(RoyaltyEvent).Assembly,
-                                typeof(CocktailRequest).Assembly);
+                                typeof(CocktailRequest).Assembly,
+                                typeof(RequestLogger<>).Assembly);
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPerformanceMonitor<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPreProcessorBehavior<,>));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSingleton<SimpleLog>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
