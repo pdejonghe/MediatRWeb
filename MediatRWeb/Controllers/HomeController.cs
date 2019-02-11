@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
 using MediatRWeb.Models;
 using MediatRWeb.Notifications;
+using MediatRWeb.Requests;
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace MediatRWeb.Controllers
 {
@@ -18,9 +16,14 @@ namespace MediatRWeb.Controllers
 
         public async Task<IActionResult> Index()
         {
+            //Notifications ... 
             var royaltyEvent = new RoyaltyEvent("Princess Elisabeth is born");
             await this.mediator.Publish(royaltyEvent);
 
+            //Send
+            var cocktailRequest = new CocktailRequest("Gin Tonic");
+            var cocktail = await this.mediator.Send(cocktailRequest);
+            ViewData["Message"] = $"You have been served: {cocktail.PopularName}!";
 
             return View();
         }
