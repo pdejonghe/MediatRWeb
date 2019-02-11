@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatRWeb", "MediatRWeb\MediatRWeb.csproj", "{34CF0936-E044-4BD3-B9F0-4615E29FA4BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatRWeb.Notifications", "MediatRWeb.Notifications\MediatRWeb.Notifications.csproj", "{1B57C0A8-E8A8-476C-B757-33CD3D6BE06C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34CF0936-E044-4BD3-B9F0-4615E29FA4BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34CF0936-E044-4BD3-B9F0-4615E29FA4BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34CF0936-E044-4BD3-B9F0-4615E29FA4BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34CF0936-E044-4BD3-B9F0-4615E29FA4BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B57C0A8-E8A8-476C-B757-33CD3D6BE06C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B57C0A8-E8A8-476C-B757-33CD3D6BE06C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B57C0A8-E8A8-476C-B757-33CD3D6BE06C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B57C0A8-E8A8-476C-B757-33CD3D6BE06C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C61CFDD7-22CB-40C4-A586-94C0AA736359}
+	EndGlobalSection
+EndGlobal
